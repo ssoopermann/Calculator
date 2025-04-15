@@ -1,0 +1,112 @@
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-4vh) rotate(180deg) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg) scale(1);
+        opacity: 0.4;
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(4vh) rotate(-180deg) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) rotate(-360deg) scale(1);
+        opacity: 0.4;
+    }
+}
+
+.floating-symbol {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: min(3rem, 5vw);
+    pointer-events: none;
+    z-index: -1;
+    animation: float 8s infinite ease-in-out;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+                 0 0 25px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.floating-symbol:nth-child(odd) {
+    animation: float2 12s infinite ease-in-out;
+}
+
+.floating-symbol:nth-child(3n) {
+    font-size: min(4rem, 7vw);
+    animation-duration: 15s;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.floating-symbol:nth-child(4n) {
+    font-size: min(2.5rem, 4vw);
+    animation-duration: 10s;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.floating-symbol:nth-child(5n) {
+    animation: float 13s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+.floating-symbol:nth-child(6n) {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-symbol:nth-child(7n) {
+    transform-origin: center;
+    animation: float2 14s infinite ease-in-out;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+    .floating-symbol {
+        font-size: min(2.5rem, 6vw);
+    }
+
+    .floating-symbol:nth-child(3n) {
+        font-size: min(3.5rem, 8vw);
+    }
+
+    .floating-symbol:nth-child(4n) {
+        font-size: min(2rem, 5vw);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .floating-symbol {
+        font-size: min(2rem, 7vw);
+    }
+
+    .floating-symbol:nth-child(3n) {
+        font-size: min(3rem, 9vw);
+    }
+
+    .floating-symbol:nth-child(4n) {
+        font-size: min(1.8rem, 6vw);
+    }
+
+    @keyframes float {
+        50% {
+            transform: translateY(-3vh) rotate(180deg) scale(1.2);
+        }
+    }
+
+    @keyframes float2 {
+        50% {
+            transform: translateY(3vh) rotate(-180deg) scale(1.2);
+        }
+    }
+} 

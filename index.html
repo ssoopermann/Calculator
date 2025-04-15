@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="floating-symbol" style="left: 10%; top: 20%;">π</div>
+    <div class="floating-symbol" style="left: 20%; top: 40%;">∞</div>
+    <div class="floating-symbol" style="left: 30%; top: 60%;">∑</div>
+    <div class="floating-symbol" style="left: 40%; top: 80%;">∫</div>
+    <div class="floating-symbol" style="left: 50%; top: 30%;">√</div>
+    <div class="floating-symbol" style="left: 60%; top: 50%;">θ</div>
+    <div class="floating-symbol" style="left: 70%; top: 70%;">Δ</div>
+    <div class="floating-symbol" style="left: 80%; top: 20%;">∂</div>
+    <div class="floating-symbol" style="left: 90%; top: 40%;">×</div>
+    <div class="floating-symbol" style="left: 10%; top: 60%;">÷</div>
+    <div class="floating-symbol" style="left: 20%; top: 80%;">±</div>
+    <div class="floating-symbol" style="left: 30%; top: 30%;">≠</div>
+    <div class="floating-symbol" style="left: 40%; top: 50%;">≈</div>
+    <div class="floating-symbol" style="left: 50%; top: 70%;">∝</div>
+    <div class="floating-symbol" style="left: 60%; top: 20%;">∈</div>
+    <div class="floating-symbol" style="left: 70%; top: 40%;">∉</div>
+    <div class="floating-symbol" style="left: 80%; top: 60%;">⊂</div>
+    <div class="floating-symbol" style="left: 90%; top: 80%;">⊃</div>
+    <div class="floating-symbol" style="left: 10%; top: 40%;">∩</div>
+    <div class="floating-symbol" style="left: 20%; top: 60%;">∪</div>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="previous-operand"></div>
+                <div class="current-operand">0</div>
+            </div>
+            <button class="span-two clear">AC</button>
+            <button class="delete">DEL</button>
+            <button class="operator">÷</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">×</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+            <button class="number span-two">0</button>
+            <button class="number">.</button>
+            <button class="equals">=</button>
+        </div>
+        <div class="history">
+            <h3>History</h3>
+            <div class="history-list"></div>
+            <button class="clear-history">Clear History</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
